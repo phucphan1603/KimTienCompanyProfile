@@ -1,0 +1,41 @@
+import React from "react";
+
+export const Footer = ({ refFooter }) => {
+  return (
+    <footer ref={refFooter} className="mx-auto bg-gray-800 text-white">
+      <div className="max-w-7xl px-4 md:px-6 lg:px-16 py-8 ">
+        <div className="flex flex-col gap-4 md:flex-row justify-between">
+          <div>
+            <div>logo</div>
+            <div>Địa chỉ</div>
+            <div>Giờ làm việc</div>
+            <div>Điện thoại</div>
+            <div>Email</div>
+          </div>
+          <div>
+            <div>Trang chủ</div>
+            <div>Giới thiệu</div>
+            <div>Dịch vụ</div>
+            <div>Sản phẩm</div>
+          </div>
+          <div className="flex justify-center text-center">
+            <a href="tel:0901234567" title="phone">
+              <img src="/images/phone.svg" alt="phone" className="w-12 h-12" />
+            </a>
+            <a href="tel:0901234567" title="zalo">
+              <img src="/images/zalo.svg" alt="phone" className="w-12 h-12" />
+            </a>
+            <a href="tel:0901234567" title="messenger">
+              <img
+                src="/images/messenger.svg"
+                alt="phone"
+                className="w-12 h-12"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="border-t mt-2 pt-2">©2025. All rights reserved</div>
+      </div>
+    </footer>
+  );
+};
