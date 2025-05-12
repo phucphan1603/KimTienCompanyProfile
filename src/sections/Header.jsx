@@ -60,7 +60,7 @@ export const Header = ({
                 } else if (menu.scrollTo === "scrollToProducts") {
                   scrollToProducts();
                 }
-                setIsOpen((prevState) => !prevState);
+                setIsOpen(false);
               }}
             >
               {menu.name}
