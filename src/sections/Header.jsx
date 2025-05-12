@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import Close from "../assets/images/close.svg";
+import Magic from "../assets/images/magic.svg";
 
 export const Header = ({
   scrollToAbout,
@@ -72,7 +74,7 @@ export const Header = ({
           onClick={() => setIsOpen((prevState) => !prevState)}
         >
           <motion.img
-            src={`/images/${isOpen ? "close" : "magic"}.svg`}
+            src={`${isOpen ? Close : Magic}`}
             initial={{ rotate: 0 }}
             animate={{ rotate: isOpen ? 180 : 0 }}
             alt="magic"

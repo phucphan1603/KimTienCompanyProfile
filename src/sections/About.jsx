@@ -1,4 +1,8 @@
 import React from "react";
+import PhanXuong1 from "../assets/images/phan-xuong-1.png";
+import PhanXuong2 from "../assets/images/phan-xuong-2.png";
+import PhanXuong3 from "../assets/images/phan-xuong-3.png";
+import PhanXuong4 from "../assets/images/phan-xuong-4.png";
 
 export const About = ({ refAbout }) => {
   return (
@@ -12,28 +16,28 @@ export const About = ({ refAbout }) => {
           <div className="bg-blue-100 w-[400px] h-[400px] relative rounded-4xl rotate-45 overflow-hidden">
             <div className="absolute w-80 h-44 rounded-4xl overflow-hidden bg-amber-300 top-2 right-2">
               <img
-                src="/images/phan-xuong-1.png"
+                src={PhanXuong1}
                 alt="About Us"
                 className="w-full h-full object-cover -rotate-45 scale-150"
               />
             </div>
             <div className="absolute w-24 h-24 rounded-2xl overflow-hidden bg-amber-300 right-2 bottom-2">
               <img
-                src="/images/phan-xuong-2.png"
+                src={PhanXuong2}
                 alt="About Us"
                 className="w-full h-full object-cover -rotate-45 scale-150"
               />
             </div>
             <div className="absolute w-24 h-24 rounded-2xl overflow-hidden bg-amber-300 right-2 bottom-28">
               <img
-                src="/images/phan-xuong-3.png"
+                src={PhanXuong3}
                 alt="About Us"
                 className="w-full h-full object-cover -rotate-45 scale-150"
               />
             </div>
             <div className="absolute w-60 h-50 rounded-2xl overflow-hidden bg-amber-300 right-28 bottom-2">
               <img
-                src="/images/phan-xuong-4.png"
+                src={PhanXuong4}
                 alt="About Us"
                 className="w-full h-full object-cover -rotate-45 scale-150"
               />

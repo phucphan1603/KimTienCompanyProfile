@@ -1,4 +1,8 @@
 import React from "react";
+import PhoneSVG from "../assets/images/phone.svg";
+import ZaloSVG from "../assets/images/zalo.svg";
+import MessengerSVG from "../assets/images/messenger.svg";
+import { motion } from "framer-motion";
 
 export const Footer = ({ refFooter }) => {
   return (
@@ -20,17 +24,13 @@ export const Footer = ({ refFooter }) => {
           </div>
           <div className="flex justify-center text-center">
             <a href="tel:0901234567" title="phone">
-              <img src="/images/phone.svg" alt="phone" className="w-12 h-12" />
+              <img src={PhoneSVG} alt="phone" className="w-12 h-12" />
             </a>
             <a href="tel:0901234567" title="zalo">
-              <img src="/images/zalo.svg" alt="phone" className="w-12 h-12" />
+              <img src={ZaloSVG} alt="phone" className="w-12 h-12" />
             </a>
             <a href="tel:0901234567" title="messenger">
-              <img
-                src="/images/messenger.svg"
-                alt="phone"
-                className="w-12 h-12"
-              />
+              <img src={MessengerSVG} alt="phone" className="w-12 h-12" />
             </a>
           </div>
         </div>

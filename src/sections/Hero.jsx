@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { ContactButtonCTA } from "../components/ContactButtonCTA";
+import HeroImage from "../assets/images/hero1.jpg";
 export const Hero = ({ scrollToFooter }) => {
   return (
     <section className="relative h-dvh w-screen overflow-hidden">
@@ -11,7 +12,7 @@ export const Hero = ({ scrollToFooter }) => {
           ease: "linear",
           repeat: Infinity,
         }}
-        src="/images/hero1.jpg"
+        src={HeroImage}
         className="h-full w-full object-cover object-left-center"
         alt="hero"
       />

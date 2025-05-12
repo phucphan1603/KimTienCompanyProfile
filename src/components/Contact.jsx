@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import PhoneSVG from "../assets/images/phone.svg";
+import ZaloSVG from "../assets/images/zalo.svg";
+import MessengerSVG from "../assets/images/messenger.svg";
 
 export const Contact = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -21,13 +24,13 @@ export const Contact = () => {
     <>
       <div className="fixed bottom-0 right-0 text-center px-4 pb-4">
         <motion.a href="tel:0901234567" title="phone">
-          <img src="/images/phone.svg" alt="phone" className="w-12 h-12" />
+          <img src={PhoneSVG} alt="phone" className="w-12 h-12" />
         </motion.a>
         <a href="tel:0901234567" title="zalo">
-          <img src="/images/zalo.svg" alt="phone" className="w-12 h-12" />
+          <img src={ZaloSVG} alt="phone" className="w-12 h-12" />
         </a>
         <a href="tel:0901234567" title="messenger">
-          <img src="/images/messenger.svg" alt="phone" className="w-12 h-12" />
+          <img src={MessengerSVG} alt="phone" className="w-12 h-12" />
         </a>
       </div>
       {/* <motion.div

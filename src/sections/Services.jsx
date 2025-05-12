@@ -1,6 +1,11 @@
 import React from "react";
 import { ContactButtonCTA } from "../components/ContactButtonCTA";
-
+import DesignLogo from "../assets/images/design-logo.png";
+import PrintLogo from "../assets/images/print-logo.png";
+import ProductLogo from "../assets/images/product-logo.png";
+import MagicIcon from "../assets/images/magic.svg";
+import BackgroundImage from "../assets/images/bg-1.jpg";
+import { motion } from "framer-motion";
 export const Services = ({ refServices, scrollToFooter }) => {
   return (
     <section
@@ -26,46 +31,38 @@ export const Services = ({ refServices, scrollToFooter }) => {
         <div className="lg:max-w-1/2 space-y-8 lg:mt-11">
           <div className="flex justify-center lg:justify-between lg:gap-10 gap-28">
             <div className="space-y-4 text-center">
-              <img
-                src="/images/design-logo.png"
-                alt=""
-                className="text-center mx-auto"
-              />
+              <img src={DesignLogo} alt="" className="text-center mx-auto" />
               <h3 className="text-xl font-semibold uppercase">Thiết kế</h3>
             </div>
             <div className="space-y-4 text-center">
-              <img
-                src="/images/print-logo.png"
-                alt=""
-                className="text-center mx-auto"
-              />
+              <img src={PrintLogo} alt="" className="text-center mx-auto" />
               <h3 className="text-xl font-semibold uppercase">In ấn</h3>
             </div>
             <div className="space-y-4 text-center">
-              <img
-                src="/images/product-logo.png"
-                alt=""
-                className="text-center mx-auto"
-              />
+              <img src={ProductLogo} alt="" className="text-center mx-auto" />
               <h3 className="text-xl font-semibold uppercase">Thành phẩm</h3>
             </div>
           </div>
           <div className="space-y-4">
             <div className="flex lg:justify-start justify-center items-start">
-              <img src="/images/magic.svg" alt="" />
+              <img src={MagicIcon} alt="" />
               <p>
                 <span className="font-medium">&nbsp; POSM quảng cáo: </span>{" "}
                 Poster, hanger, kệ trưng bày, bảng hiệu, banner...
               </p>
             </div>
             <div className="flex lg:justify-start justify-center items-start">
-              <img src="/images/magic.svg" alt="" />
+              <img src={MagicIcon} alt="" />
               <p>
                 <span className="font-medium">&nbsp; Bao bì – Hộp cứng: </span>{" "}
                 Hộp mỹ phẩm, hộp quà, túi giấy, màng metalize, tem nhãn...
               </p>
             </div>
-            <img src="/images/bg-1.jpg" alt="may-in-1" className="h-52 w-full object-cover rounded-2xl"/>
+            <img
+              src={BackgroundImage}
+              alt="may-in-1"
+              className="h-52 w-full object-cover rounded-2xl"
+            />
           </div>
         </div>
       </div>
