@@ -2,7 +2,7 @@ import React from "react";
 import PhoneSVG from "../assets/images/phone.svg";
 import ZaloSVG from "../assets/images/zalo.svg";
 import MessengerSVG from "../assets/images/messenger.svg";
-import { motion } from "framer-motion";
+import { menus } from "./../constants/menus";
 
 export const Footer = ({ refFooter }) => {
   return (
@@ -17,12 +17,20 @@ export const Footer = ({ refFooter }) => {
             <div>Email</div>
           </div>
           <div>
-            <div>Trang chủ</div>
-            <div>Giới thiệu</div>
-            <div>Dịch vụ</div>
-            <div>Sản phẩm</div>
+            {menus.map((menu) => {
+              return (
+                <div key={menu.id} className="flex flex-col gap-2">
+                  <a
+                    href={`#${menu.id}`}
+                    className="text-white hover:text-amber-400"
+                  >
+                    {menu.name}
+                  </a>
+                </div>
+              );
+            })}
           </div>
-          <div className="flex justify-center text-center">
+          {/* <div className="flex justify-center text-center">
             <a href="tel:0901234567" title="phone">
               <img src={PhoneSVG} alt="phone" className="w-12 h-12" />
             </a>
@@ -32,7 +40,7 @@ export const Footer = ({ refFooter }) => {
             <a href="tel:0901234567" title="messenger">
               <img src={MessengerSVG} alt="phone" className="w-12 h-12" />
             </a>
-          </div>
+          </div> */}
         </div>
         <div className="border-t mt-2 pt-2">©2025. All rights reserved</div>
       </div>

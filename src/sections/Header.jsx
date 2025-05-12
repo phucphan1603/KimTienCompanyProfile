@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion } from "motion/react";
 import Close from "../assets/images/close.svg";
 import Magic from "../assets/images/magic.svg";
+import { menus } from "../constants/menus";
+import { Logo } from "../components/Logo";
+import HamburgerIcon from "../assets/images/hamburger-menu.svg";
+import clsx from "clsx";
 
 export const Header = ({
   scrollToAbout,
@@ -10,30 +14,18 @@ export const Header = ({
   scrollToProducts,
 }) => {
   const [prevScroll, setPrevScroll] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [isScrollUp, setScrollUp] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  const { scrollY } = useScroll();
-
-  const height = useTransform(scrollY, [0, 100], [80, 60]);
-  const background = useTransform(
-    scrollY,
-    [0, 100],
-    ["transparent", "rgba(0,0,0,0.8)"]
-  );
-  const boxShadow = useTransform(
-    scrollY,
-    [0, 100],
-    ["", "0px 4px 12px rgba(0,0,0,0.5)"]
-  );
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
-      if (currentScroll > prevScroll && currentScroll > 100) {
-        setVisible(false); // Cuộn xuống
+      console.log({ currentScroll });
+      console.log({ prevScroll });
+      if (currentScroll > prevScroll && currentScroll > 200) {
+        setScrollUp(false); // Cuộn xuống
       } else {
-        setVisible(true); // Cuộn lên
+        setScrollUp(true); // Cuộn lên
       }
       setPrevScroll(currentScroll);
     };
@@ -43,38 +35,44 @@ export const Header = ({
   }, [prevScroll]);
 
   return (
-    <motion.header
-      animate={{ y: visible ? 0 : -100 }}
-      transition={{ duration: 0.3 }}
-      style={{
-        height,
-        background,
-        boxShadow,
-      }}
-      className="fixed top-0 left-0 z-50 w-full px-4 md:px-0"
-    >
-      <nav className="max-w-7xl mx-auto flex h-full w-full items-center justify-between md:px-8 lg:px-16 text-white">
-        <div>Logo</div>
-        <div className="hidden md:flex space-x-8">
-          <div className="sub-menu" onClick={scrollToTop}>
-            Trang chủ
-          </div>
-          <div className="sub-menu" onClick={scrollToAbout}>
-            Giới thiệu
-          </div>
-          <div className="sub-menu" onClick={scrollToServices}>
-            Dịch vụ
-          </div>
-          <div className="sub-menu" onClick={scrollToProducts}>
-            Sản phẩm
-          </div>
+    <motion.header className="fixed shadow-2xl h-16 w-full top-0 left-0 px-4 md:px-0 z-50 bg-white">
+      <nav className="max-w-7xl mx-auto flex h-full w-full items-center justify-between md:px-8 lg:px-16 text-gray-800">
+        <Logo />
+        <div
+          className={clsx(
+            "md:flex transition-opacity duration-300 opacity-0 md:opacity-100 md:flex-row flex-col justify-start gap-4 md:gap-1 z-50 md:h-full items-center bg-white",
+            isOpen
+              ? "md:relative fixed top-0 bottom-0 left-0 right-0 mt-14 pt-16 flex opacity-100 bg-linear-to-b from-white to-amber-400"
+              : "hidden"
+          )}
+        >
+          {menus.map((menu) => (
+            <div
+              key={menu.id}
+              className="md:h-full cursor-pointer font-semibold md:font-medium text-blue-900 hover:bg-gray-200 hover:text-orange-400 px-2 py-2 flex items-center text-2xl md:text-base"
+              onClick={() => {
+                if (menu.scrollTo === "scrollToTop") {
+                  scrollToTop();
+                } else if (menu.scrollTo === "scrollToAbout") {
+                  scrollToAbout();
+                } else if (menu.scrollTo === "scrollToServices") {
+                  scrollToServices();
+                } else if (menu.scrollTo === "scrollToProducts") {
+                  scrollToProducts();
+                }
+                setIsOpen((prevState) => !prevState);
+              }}
+            >
+              {menu.name}
+            </div>
+          ))}
         </div>
         <button
-          className="md:hidden z-2 size-10 border-2 border-blue-300 cursor-pointer rounded-full flex justify-center items-center"
+          className="md:hidden z-2 size-10 border-2 border-amber-400 cursor-pointer rounded-lg flex justify-center items-center"
           onClick={() => setIsOpen((prevState) => !prevState)}
         >
           <motion.img
-            src={`${isOpen ? Close : Magic}`}
+            src={`${isOpen ? Close : HamburgerIcon}`}
             initial={{ rotate: 0 }}
             animate={{ rotate: isOpen ? 180 : 0 }}
             alt="magic"

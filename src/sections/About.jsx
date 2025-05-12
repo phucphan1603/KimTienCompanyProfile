@@ -1,53 +1,54 @@
 import React from "react";
 import PhanXuong1 from "../assets/images/phan-xuong-1.png";
-import PhanXuong2 from "../assets/images/phan-xuong-2.png";
 import PhanXuong3 from "../assets/images/phan-xuong-3.png";
-import PhanXuong4 from "../assets/images/phan-xuong-4.png";
+import BorderShape2 from "../assets/images/border-shape-2.png";
+import AboutShape1 from "../assets/images/about-shape-1.png";
+import triangle from "../assets/images/triangle.svg";
+import MagicIcon from "../assets/images/magic.svg";
 
 export const About = ({ refAbout }) => {
   return (
     <section
       ref={refAbout}
-      className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pt-28 pb-8 overflow-hidden"
+      className="relative max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pt-28 pb-8 overflow-hidden"
     >
       <div className="flex flex-col gap-4 lg:gap-20 lg:flex-row justify-between items-center">
-        <div className="relative mb-20">
-          <div className="absolute w-36 h-36 rounded-4xl overflow-hidden rotate-45 bg-blue-300/25 -top-12 -left-6 z-50" />
-          <div className="bg-blue-100 w-[400px] h-[400px] relative rounded-4xl rotate-45 overflow-hidden">
-            <div className="absolute w-80 h-44 rounded-4xl overflow-hidden bg-amber-300 top-2 right-2">
-              <img
-                src={PhanXuong1}
-                alt="About Us"
-                className="w-full h-full object-cover -rotate-45 scale-150"
-              />
-            </div>
-            <div className="absolute w-24 h-24 rounded-2xl overflow-hidden bg-amber-300 right-2 bottom-2">
-              <img
-                src={PhanXuong2}
-                alt="About Us"
-                className="w-full h-full object-cover -rotate-45 scale-150"
-              />
-            </div>
-            <div className="absolute w-24 h-24 rounded-2xl overflow-hidden bg-amber-300 right-2 bottom-28">
-              <img
-                src={PhanXuong3}
-                alt="About Us"
-                className="w-full h-full object-cover -rotate-45 scale-150"
-              />
-            </div>
-            <div className="absolute w-60 h-50 rounded-2xl overflow-hidden bg-amber-300 right-28 bottom-2">
-              <img
-                src={PhanXuong4}
-                alt="About Us"
-                className="w-full h-full object-cover -rotate-45 scale-150"
-              />
-            </div>
-          </div>
+        <div className="relative w-96 h-96 pt-10 lg:mb-2 mb-24 px-6">
+          <img
+            src={BorderShape2}
+            alt="icon-bg"
+            className="absolute -left-20 -z-10 top-20 h-1/2"
+          />
+          <img
+            src={AboutShape1}
+            alt="icon-bg"
+            className="absolute -right-10 -z-10 -bottom-10"
+          />
+          <img
+            src={PhanXuong1}
+            alt="Phan xuong 1"
+            className="object-cover w-52 h-32 absolute -top-10 -right-10"
+          />
+          <img
+            src={PhanXuong1}
+            alt="Phan xuong 1"
+            className="object-cover w-44 h-44 absolute -bottom-20 -left-20"
+          />
+          <img
+            src={PhanXuong3}
+            alt="Phan xuong 3"
+            className="object-cover w-full h-full"
+          />
         </div>
-        <div className="w-full lg:w-1/2 space-y-4">
-          <h2 className="text-2xl font-medium">Giới thiệu</h2>
-          <p className="text-4xl font-semibold">Tại sao lại chọn chúng tôi?</p>
-          <p className="text-lg  space-y-4">
+        <div className="space-y-4 lg:w-1/2 w-full">
+          <h2 className="text-xl font-medium text-orange-400 uppercase flex justify-start items-center gap-4">
+            <span>Giới thiệu</span>
+            <img src={triangle} alt="triangle" className="rotate-90" />
+          </h2>
+          <p className="md:text-5xl text-3xl font-extrabold text-blue-900 uppercase space-y-4 leading-10 md:leading-16">
+            In chuẩn – Gia công đẹp – Thể hiện đẳng cấp
+          </p>
+          <p className="text-lg space-y-2 md:space-y-4 text-gray-800">
             <span className="font-bold">
               Công ty TNHH MTV In Ấn Quảng Cáo Kim Tiền
             </span>{" "}
@@ -65,6 +66,22 @@ export const About = ({ refAbout }) => {
             hệ thống máy móc hiện đại, giúp rút ngắn thời gian, kiểm soát chất
             lượng và tối ưu chi phí cho khách hàng.
           </p>
+          <div className="space-y-4">
+            <div className="flex justify-start items-start">
+              <img src={MagicIcon} alt="" />
+              <p>
+                <span className="font-medium">&nbsp; POSM quảng cáo: </span>{" "}
+                Poster, hanger, kệ trưng bày, bảng hiệu, banner...
+              </p>
+            </div>
+            <div className="flex justify-start items-start">
+              <img src={MagicIcon} alt="" />
+              <p>
+                <span className="font-medium">&nbsp; Bao bì – Hộp cứng: </span>{" "}
+                Hộp mỹ phẩm, hộp quà, túi giấy, màng metalize, tem nhãn...
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
