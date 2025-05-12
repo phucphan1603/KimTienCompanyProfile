@@ -41,7 +41,7 @@ function App() {
       <main>
         <Hero scrollToFooter={scrollToFooter} />
         <About refAbout={refAbout} />
-        <Services refServices={refServices} scrollToFooter={scrollToFooter} />
+        <Services refServices={refServices} />
         <Products refProducts={refProducts} />
         <Partner />
       </main>

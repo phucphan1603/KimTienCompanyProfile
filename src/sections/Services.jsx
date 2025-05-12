@@ -4,7 +4,7 @@ import PrintLogo from "../assets/images/print-logo.png";
 import ProductLogo from "../assets/images/product-logo.png";
 import triangle from "../assets/images/triangle.svg";
 import { motion } from "framer-motion";
-export const Services = ({ refServices, scrollToFooter }) => {
+export const Services = ({ refServices }) => {
   return (
     <section ref={refServices} className="bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-8 relative">
@@ -32,10 +32,9 @@ export const Services = ({ refServices, scrollToFooter }) => {
                   Thiết kế
                 </h3>
                 <p className="text-gray-800">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nesciunt porro laboriosam sint aliquid earum pariatur unde
-                  debitis culpa deserunt at officia inventore a iusto, quas esse
-                  ullam et dolorum incidunt!
+                  Chúng tôi mang đến những ý tưởng sáng tạo, phù hợp với từng
+                  thương hiệu – từ logo, bao bì đến các ấn phẩm quảng cáo, giúp
+                  bạn nổi bật ngay từ cái nhìn đầu tiên.
                 </p>
               </div>
               <div className="space-y-4 text-left p-6 rounded-lg bg-white shadow-lg">
@@ -48,10 +47,9 @@ export const Services = ({ refServices, scrollToFooter }) => {
                   In ấn
                 </h3>
                 <p className="text-gray-800">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nesciunt porro laboriosam sint aliquid earum pariatur unde
-                  debitis culpa deserunt at officia inventore a iusto, quas esse
-                  ullam et dolorum incidunt!
+                  Sở hữu hệ thống máy in hiện đại, chúng tôi cam kết chất lượng
+                  in sắc nét, màu sắc trung thực trên đa dạng chất liệu – từ
+                  giấy, nhựa, đến vải và mica.
                 </p>
               </div>
               <div className="space-y-4 text-left p-6 rounded-lg bg-white shadow-lg">
@@ -64,10 +62,9 @@ export const Services = ({ refServices, scrollToFooter }) => {
                   Thành phẩm
                 </h3>
                 <p className="text-gray-800">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nesciunt porro laboriosam sint aliquid earum pariatur unde
-                  debitis culpa deserunt at officia inventore a iusto, quas esse
-                  ullam et dolorum incidunt!
+                  Sở hữu hệ thống máy in hiện đại, chúng tôi cam kết chất lượng
+                  in sắc nét, màu sắc trung thực trên đa dạng chất liệu – từ
+                  giấy, nhựa, đến vải và mica.
                 </p>
               </div>
             </div>
