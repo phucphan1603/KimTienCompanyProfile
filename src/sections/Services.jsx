@@ -29,17 +29,29 @@ export const Services = ({ refServices, scrollToFooter }) => {
           </div>
         </div>
         <div className="lg:max-w-1/2 space-y-8 lg:mt-11">
-          <div className="flex justify-center lg:justify-between lg:gap-10 gap-28">
-            <div className="space-y-4 text-center">
-              <img src={DesignLogo} alt="" className="text-center mx-auto" />
+          <div className="flex justify-center gap-8 lg:justify-between lg:gap-10">
+            <div className="space-y-4 text-center ">
+              <img
+                src={DesignLogo}
+                alt=""
+                className="text-center mx-auto w-10 h-10 lg:h-24 lg:w-24 md:h-16 md:w-16 object-contain"
+              />
               <h3 className="text-xl font-semibold uppercase">Thiết kế</h3>
             </div>
-            <div className="space-y-4 text-center">
-              <img src={PrintLogo} alt="" className="text-center mx-auto" />
+            <div className="space-y-4 text-center ">
+              <img
+                src={PrintLogo}
+                alt=""
+                className="text-center mx-auto w-10 h-10 lg:h-24 lg:w-24 md:h-16 md:w-16 object-contain"
+              />
               <h3 className="text-xl font-semibold uppercase">In ấn</h3>
             </div>
             <div className="space-y-4 text-center">
-              <img src={ProductLogo} alt="" className="text-center mx-auto" />
+              <img
+                src={ProductLogo}
+                alt=""
+                className="text-center mx-auto w-10 h-10 lg:h-24 lg:w-24 md:h-16 md:w-16 object-contain"
+              />
               <h3 className="text-xl font-semibold uppercase">Thành phẩm</h3>
             </div>
           </div>

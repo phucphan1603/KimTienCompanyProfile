@@ -8,7 +8,7 @@ export const About = ({ refAbout }) => {
   return (
     <section
       ref={refAbout}
-      className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pt-28 pb-8 "
+      className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pt-28 pb-8 overflow-hidden"
     >
       <div className="flex flex-col gap-4 lg:gap-20 lg:flex-row justify-between items-center">
         <div className="relative mb-20">
