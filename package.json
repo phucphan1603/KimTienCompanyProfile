@@ -16,6 +16,7 @@
     "@tailwindcss/vite": "^4.1.6",
     "clsx": "^2.1.1",
     "framer-motion": "^12.10.5",
+    "lightgallery": "^2.8.3",
     "motion": "^12.10.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
@@ -32,6 +33,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "postcss": "^8.5.3",
+    "sass-embedded": "^1.88.0",
     "tailwindcss": "^4.1.6",
     "vite": "^6.3.5"
   }

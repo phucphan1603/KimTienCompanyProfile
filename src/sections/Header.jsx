@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import Close from "../assets/images/close.svg";
-import Magic from "../assets/images/magic.svg";
 import { menus } from "../constants/menus";
 import { Logo } from "../components/Logo";
 import HamburgerIcon from "../assets/images/hamburger-menu.svg";
@@ -12,32 +11,14 @@ export const Header = ({
   scrollToTop,
   scrollToServices,
   scrollToProducts,
+  scrollToFooter,
 }) => {
-  const [prevScroll, setPrevScroll] = useState(0);
-  const [isScrollUp, setScrollUp] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      console.log({ currentScroll });
-      console.log({ prevScroll });
-      if (currentScroll > prevScroll && currentScroll > 200) {
-        setScrollUp(false); // Cuộn xuống
-      } else {
-        setScrollUp(true); // Cuộn lên
-      }
-      setPrevScroll(currentScroll);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScroll]);
 
   return (
     <motion.header className="fixed shadow-2xl h-16 w-full top-0 left-0 px-4 md:px-0 z-50 bg-white">
       <nav className="max-w-7xl mx-auto flex h-full w-full items-center justify-between md:px-8 lg:px-16 text-gray-800">
-        <Logo />
+        <Logo handleClick={scrollToTop} />
         <div
           className={clsx(
             "md:flex transition-opacity duration-300 opacity-0 md:opacity-100 md:flex-row flex-col justify-start gap-4 md:gap-1 z-50 md:h-full items-center bg-white",
@@ -59,6 +40,8 @@ export const Header = ({
                   scrollToServices();
                 } else if (menu.scrollTo === "scrollToProducts") {
                   scrollToProducts();
+                } else if (menu.scrollTo === "scrollToFooter") {
+                  scrollToFooter();
                 }
                 setIsOpen(false);
               }}

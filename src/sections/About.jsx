@@ -17,7 +17,7 @@ export const About = ({ refAbout }) => {
           <img
             src={BorderShape2}
             alt="icon-bg"
-            className="absolute -left-20 -z-10 top-20 h-1/2"
+            className="absolute -left-12 -z-10 top-20 h-1/2"
           />
           <img
             src={AboutShape1}
@@ -32,7 +32,7 @@ export const About = ({ refAbout }) => {
           <img
             src={PhanXuong1}
             alt="Phan xuong 1"
-            className="object-cover w-44 h-44 absolute -bottom-20 -left-20"
+            className="object-cover w-44 h-44 absolute -bottom-20 -left-16"
           />
           <img
             src={PhanXuong3}
