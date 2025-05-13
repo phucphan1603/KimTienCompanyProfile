@@ -30,7 +30,7 @@ export const Header = ({
           {menus.map((menu) => (
             <div
               key={menu.id}
-              className="md:h-full cursor-pointer font-semibold md:font-medium text-blue-900 hover:bg-gray-200 hover:text-orange-400 px-2 py-2 flex items-center text-2xl md:text-base"
+              className="md:h-full cursor-pointer font-semibold md:font-medium text-blue-900 hover:bg-gray-200 hover:text-red-500 px-2 py-2 flex items-center text-2xl md:text-base"
               onClick={() => {
                 if (menu.scrollTo === "scrollToTop") {
                   scrollToTop();

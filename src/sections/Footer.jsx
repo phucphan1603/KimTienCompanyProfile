@@ -24,19 +24,15 @@ export const Footer = ({
               Minh
             </div>
             <div>
-              Xưởng TP1: 81/2 Đường An Phú Đông 25, P. An Phú Đông, Quận 12,
-              Tp.Hồ Chí Minh
-            </div>
-            <div>
-              Xưởng TP2: 100/1/3 đường an Phú đông 25, Phương an Phú đông, Quận
+              Xưởng Thành Phẩm: 100/1/3 đường an Phú đông 25, Phương an Phú đông, Quận
               12, Tp.Hồ Chí Minh
             </div>
             <div>
-              Phân xưởng sắt: E15/19B Âp 5, Kênh Trung Ương, Vĩnh Lộc B, Bình
+              Phân Xưởng Sắt: E15/19B Âp 5, Kênh Trung Ương, Vĩnh Lộc B, Bình
               Chánh, Tp.Hồ Chí Minh
             </div>
             <div>Giờ làm việc: 8h - 17h (Thứ 2 - Thứ 7)</div>
-            <div>Điện thoại: +84962.922.327</div>
+            <div>Điện thoại: +84919.535.525</div>
             <div>Email: abc@gmail.com</div>
           </div>
           <div className="space-y-6">
@@ -44,7 +40,7 @@ export const Footer = ({
               return (
                 <div
                   key={menu.id}
-                  className="flex flex-col gap-2 hover:text-amber-400 cursor-pointer"
+                  className="flex flex-col gap-2 hover:text-red-500 cursor-pointer"
                   onClick={() => {
                     if (menu.scrollTo === "scrollToTop") {
                       scrollToTop();
@@ -70,7 +66,7 @@ export const Footer = ({
                 Liên hệ với chúng tôi
               </div>
               <div className="flex gap-2">
-                <img
+                {/* <img
                   src={PhoneSVG}
                   alt="phone"
                   className="w-12 h-12 cursor-pointer hover:scale-110 transition-transform duration-300"
@@ -79,7 +75,7 @@ export const Footer = ({
                   src={MessengerSVG}
                   alt="messenger"
                   className="w-12 h-12 cursor-pointer hover:scale-110 transition-transform duration-300"
-                />
+                /> */}
                 <img
                   src={ZaloSVG}
                   alt="zalo"

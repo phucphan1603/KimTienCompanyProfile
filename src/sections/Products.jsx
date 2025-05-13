@@ -9,7 +9,7 @@ export const Products = ({ refProducts }) => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-8 relative">
         <div className="text-center mx-auto">
           <div className="space-y-4 w-full lg:w-2/3 mx-auto">
-            <h2 className="text-xl font-medium text-orange-400 uppercase flex justify-center items-center gap-4">
+            <h2 className="text-xl font-medium text-red-500 uppercase flex justify-center items-center gap-4">
               <img src={triangle} alt="triangle" className="-rotate-90" />
               <span>Sản phẩm</span>
               <img src={triangle} alt="triangle" className="rotate-90" />

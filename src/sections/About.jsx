@@ -41,7 +41,7 @@ export const About = ({ refAbout }) => {
           />
         </div>
         <div className="space-y-4 lg:w-1/2 w-full">
-          <h2 className="text-xl font-medium text-orange-400 uppercase flex justify-start items-center gap-4">
+          <h2 className="text-xl font-medium text-red-500 uppercase flex justify-start items-center gap-4">
             <span>Giới thiệu</span>
             <img src={triangle} alt="triangle" className="rotate-90" />
           </h2>

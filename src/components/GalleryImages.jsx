@@ -66,18 +66,7 @@ const imageProducts = [
 
 export const GalleryImages = () => {
   const ref = useRef(null);
-  const [activeFilter, setActiveFilter] = useState("all");
-  const isInView = useInView(ref, { once: true, margin: "250px 0px" });
-
-  const imageFiltered = useMemo(() => {
-    let images = [...imageProducts].filter((image) => {
-      if (activeFilter === "all") {
-        return true;
-      }
-      return image.type === activeFilter;
-    });
-    return images;
-  }, [activeFilter]);
+  const isInView = useInView(ref, { once: true, margin: "-250px 0px" });
 
   return (
     <div className="mt-4">
@@ -88,7 +77,7 @@ export const GalleryImages = () => {
         thumbnail={false}
         download
       >
-        {imageFiltered.map((image, index) => (
+        {imageProducts.map((image, index) => (
           <motion.a
             key={index}
             ref={ref}

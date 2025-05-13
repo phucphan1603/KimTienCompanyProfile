@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { Contact } from "./components/Contact";
 import { Footer } from "./sections/Footer";
 import { Header } from "./sections/Header";
 import { Hero } from "./sections/Hero";
