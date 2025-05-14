@@ -1,28 +1,29 @@
-import React from "react";
 import DesignLogo from "../assets/images/design-logo.png";
 import PrintLogo from "../assets/images/print-logo.png";
 import ProductLogo from "../assets/images/product-logo.png";
-import triangle from "../assets/images/triangle.svg";
-import { motion } from "framer-motion";
+import { SectionDesc } from "../components/SectionDesc";
+import { SectionTitle } from "../components/SectionTitle";
+import { motion } from "motion/react";
 export const Services = ({ refServices }) => {
   return (
     <section ref={refServices} className="bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-8 relative">
         <div className="text-center mx-auto">
           <div className="space-y-4 w-full lg:w-2/3 mx-auto">
-            <h2 className="text-xl font-medium text-red-500 uppercase flex justify-center items-center gap-4">
-              <img src={triangle} alt="triangle" className="-rotate-90" />
-              <span>Dịch vụ</span>
-              <img src={triangle} alt="triangle" className="rotate-90" />
-            </h2>
-            <p className="md:text-5xl text-3xl font-extrabold text-blue-900 uppercase space-y-4 leading-10 md:leading-16">
-              Giải pháp in ấn & gia công thành phẩm trọn gói - Nâng tầm thương
-              hiệu của bạn
-            </p>
+            <SectionTitle title="Dịch vụ" center />
+            <SectionDesc
+              desc=" Giải pháp in ấn & gia công thành phẩm trọn gói - Nâng tầm thương
+              hiệu của bạn"
+            />
           </div>
           <div className="space-y-8 my-10">
             <div className="flex flex-col md:flex-row justify-center gap-8 lg:justify-between lg:gap-10">
-              <div className="space-y-4 text-left p-6 rounded-lg bg-white shadow-lg">
+              <motion.div
+                initial={{ opacity: 1, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-4 text-left p-6 rounded-lg bg-white shadow-lg"
+              >
                 <img
                   src={DesignLogo}
                   alt=""
@@ -36,8 +37,13 @@ export const Services = ({ refServices }) => {
                   thương hiệu – từ logo, bao bì đến các ấn phẩm quảng cáo, giúp
                   bạn nổi bật ngay từ cái nhìn đầu tiên.
                 </p>
-              </div>
-              <div className="space-y-4 text-left p-6 rounded-lg bg-white shadow-lg">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 1, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="space-y-4 text-left p-6 rounded-lg bg-white shadow-lg"
+              >
                 <img
                   src={PrintLogo}
                   alt=""
@@ -51,8 +57,13 @@ export const Services = ({ refServices }) => {
                   in sắc nét, màu sắc trung thực trên đa dạng chất liệu – từ
                   giấy, nhựa, đến vải và mica.
                 </p>
-              </div>
-              <div className="space-y-4 text-left p-6 rounded-lg bg-white shadow-lg">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 1, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="space-y-4 text-left p-6 rounded-lg bg-white shadow-lg"
+              >
                 <img
                   src={ProductLogo}
                   alt=""
@@ -66,7 +77,7 @@ export const Services = ({ refServices }) => {
                   in sắc nét, màu sắc trung thực trên đa dạng chất liệu – từ
                   giấy, nhựa, đến vải và mica.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

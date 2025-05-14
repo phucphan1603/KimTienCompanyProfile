@@ -1,20 +1,19 @@
-import React, { useMemo, useRef, useState } from "react";
-import { motion, useInView } from "motion/react";
 import LightGallery from "lightgallery/react";
+import { motion } from "motion/react";
+import { useRef } from "react";
 
 // import styles
-import "lightgallery/css/lightgallery.css";
-import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lightgallery.css";
 
 // If you want you can use SCSS instead of css
-import "lightgallery/scss/lightgallery.scss";
 import "lightgallery/scss/lg-zoom.scss";
+import "lightgallery/scss/lightgallery.scss";
 
 // import plugins if you need
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
-import clsx from "clsx";
 
 import Hanger1 from "../assets/images-gallery/hanger-1.png";
 import Hanger2 from "../assets/images-gallery/hanger-2.png";
@@ -66,10 +65,9 @@ const imageProducts = [
 
 export const GalleryImages = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-250px 0px" });
 
   return (
-    <div className="mt-4">
+    <div className="mt-4" ref={ref}>
       <LightGallery
         elementClassNames="grid grid-cols-2 md:grid-cols-4 gap-3 p-4 "
         speed={500}
@@ -80,12 +78,9 @@ export const GalleryImages = () => {
         {imageProducts.map((image, index) => (
           <motion.a
             key={index}
-            ref={ref}
-            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-            whileTap={{ scale: 0.95, transition: { duration: 0.3 } }}
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.3 }}
             href={image.src}
             className="overflow-hidden rounded-xs shadow-xl cursor-pointer"
           >
