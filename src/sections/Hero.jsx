@@ -4,7 +4,7 @@ import { ContactButtonCTA } from "../components/ContactButtonCTA";
 
 export const Hero = ({ scrollToFooter }) => {
   return (
-    <section className="hero-section relative h-dvh overflow-hidden">
+    <section className="hero-section relative h-dvh overflow-hidden min-h-[500px]">
       <div className="absolute top-0 left-0 z-20 w-full h-full text-black bg-black/60">
         <div className="flex items-center justify-end w-full h-full max-w-7xl mx-auto text-white">
           <div className="max-w-7xl flex flex-col items-center justify-center relative p-4 md:p-8 lg:p-24 md:space-y-6 space-y-2 w-full mx-2">
@@ -40,11 +40,6 @@ export const Hero = ({ scrollToFooter }) => {
               <ContactButtonCTA scrollToFooter={scrollToFooter} />
             </motion.div>
           </div>
-          {/* <img
-            src={HeroPattern2}
-            alt="hero-pattern-2"
-            className="absolute w-1/2 right-0 -z-10"
-          /> */}
           <img
             src={HeroPattern1}
             alt="hero-pattern-1"

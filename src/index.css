@@ -38,20 +38,17 @@ body {
   background-attachment: fixed;
 }
 
-.service-section {
-  position: relative;
-  width: 100%;
-  background-image: url("./assets/images/hero1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 .section-about {
   background-image: url("./assets/images/bg-section.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-section,
+  .partner-section {
+    background-attachment: unset;
+  }
 }
