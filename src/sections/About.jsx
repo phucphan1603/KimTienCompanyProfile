@@ -9,36 +9,33 @@ import { motion } from "motion/react";
 
 export const About = ({ refAbout }) => {
   return (
-    <section
-      ref={refAbout}
-      className="relative max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pt-12 lg:pt-8 pb-8 overflow-hidden"
-    >
-      <div className="flex flex-col gap-4 lg:gap-20 lg:flex-row justify-between items-center">
+    <section ref={refAbout} className="section-about relative overflow-hidden">
+      <div className="flex flex-col gap-4 lg:gap-20 lg:flex-row justify-between items-center max-w-7xl mx-auto px-4 md:px-8 lg:px-16 pt-12 lg:pt-8 pb-8">
         <div className="relative w-96 h-96 pt-10 lg:mb-2 mb-24 px-6">
           <img
             src={BorderShape2}
             alt="icon-bg"
-            className="absolute -left-12 -z-10 top-20 h-1/2"
+            className="absolute -left-12 z-0 top-20 h-1/2"
           />
           <img
             src={AboutShape1}
             alt="icon-bg"
-            className="absolute -right-10 -z-10 -bottom-10"
+            className="absolute -right-10 z-0 -bottom-10"
           />
           <img
             src={PhanXuong1}
             alt="Phan xuong 1"
-            className="object-cover w-52 h-32 absolute -top-10 -right-10"
+            className="object-cover w-52 h-32 z-10 absolute -top-10 -right-10"
           />
           <img
             src={PhanXuong1}
             alt="Phan xuong 1"
-            className="object-cover w-44 h-44 absolute -bottom-20 -left-16"
+            className="object-cover w-44 h-44 z-10 absolute -bottom-20 -left-16"
           />
           <img
             src={PhanXuong3}
             alt="Phan xuong 3"
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full absolute"
           />
         </div>
         <div className="space-y-4 lg:w-1/2 w-full">
@@ -48,6 +45,7 @@ export const About = ({ refAbout }) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true }}
           >
             <p className="space-y-2 md:space-y-4 text-gray-800">
               <span className="font-bold">

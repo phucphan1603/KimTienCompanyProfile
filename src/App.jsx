@@ -6,6 +6,7 @@ import { About } from "./sections/About";
 import { Services } from "./sections/Services";
 import { Products } from "./sections/Products";
 import { Partner } from "./sections/Partner";
+import { GalleryIntro } from "./sections/galleryIntro";
 
 function App() {
   const refFooter = useRef(null);
@@ -41,6 +42,7 @@ function App() {
         <Hero scrollToFooter={scrollToFooter} />
         <About refAbout={refAbout} />
         <Services refServices={refServices} />
+        <GalleryIntro />
         <Products refProducts={refProducts} />
         <Partner />
       </main>

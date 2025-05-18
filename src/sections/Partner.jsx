@@ -44,8 +44,8 @@ const dataPartner = [
 
 export const Partner = () => {
   return (
-    <section className="">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-8 relative">
+    <section className="partner-section relative">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-8 bg-white/40">
         <div className="text-center mx-auto">
           <div className="space-y-4 w-full lg:w-2/3 mx-auto">
             <SectionTitle title="Đối tác" center />
@@ -64,6 +64,7 @@ export const Partner = () => {
                   y: 0,
                   transition: { duration: 0.5, delay: index * 0.2 },
                 }}
+                viewport={{ once: true }}
               >
                 <img
                   src={partner.logo}

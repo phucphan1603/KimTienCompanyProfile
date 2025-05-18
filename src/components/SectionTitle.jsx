@@ -3,7 +3,11 @@ import triangle from "../assets/images/triangle.svg";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 
-export const SectionTitle = ({ title = "", center = false }) => {
+export const SectionTitle = ({
+  title = "",
+  center = false,
+  className = "",
+}) => {
   return (
     <motion.h2
       initial={{ opacity: 0, y: -20 }}
@@ -11,8 +15,10 @@ export const SectionTitle = ({ title = "", center = false }) => {
       transition={{ duration: 0.5 }}
       className={clsx(
         "text-xl font-medium text-red-500 uppercase flex items-center gap-4",
-        center ? "justify-center" : "justify-start"
+        center ? "justify-center" : "justify-start",
+        className
       )}
+      viewport={{ once: true }}
     >
       {center && <img src={triangle} alt="triangle" className="-rotate-90" />}
       <span>{title}</span>

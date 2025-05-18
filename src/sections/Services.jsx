@@ -1,12 +1,12 @@
+import { motion } from "motion/react";
 import DesignLogo from "../assets/images/design-logo.png";
 import PrintLogo from "../assets/images/print-logo.png";
 import ProductLogo from "../assets/images/product-logo.png";
 import { SectionDesc } from "../components/SectionDesc";
 import { SectionTitle } from "../components/SectionTitle";
-import { motion } from "motion/react";
 export const Services = ({ refServices }) => {
   return (
-    <section ref={refServices} className="bg-gray-100">
+    <section ref={refServices} className="relative bg-gray-200/20">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-8 relative">
         <div className="text-center mx-auto">
           <div className="space-y-4 w-full lg:w-2/3 mx-auto">
@@ -23,6 +23,7 @@ export const Services = ({ refServices }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="space-y-4 text-left p-6 rounded-lg bg-white shadow-lg"
+                viewport={{ once: true }}
               >
                 <img
                   src={DesignLogo}
@@ -43,6 +44,7 @@ export const Services = ({ refServices }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="space-y-4 text-left p-6 rounded-lg bg-white shadow-lg"
+                viewport={{ once: true }}
               >
                 <img
                   src={PrintLogo}
@@ -63,6 +65,7 @@ export const Services = ({ refServices }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="space-y-4 text-left p-6 rounded-lg bg-white shadow-lg"
+                viewport={{ once: true }}
               >
                 <img
                   src={ProductLogo}
@@ -80,14 +83,6 @@ export const Services = ({ refServices }) => {
               </motion.div>
             </div>
           </div>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0">
-          {/* <img
-          src="/images/background.svg"
-          alt="background"
-          className="w-full object-cover"
-        /> */}
         </div>
       </div>
     </section>
